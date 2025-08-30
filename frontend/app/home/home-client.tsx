@@ -192,7 +192,7 @@ export default function HomePageClient({
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Latest Posts Section */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 order-2 lg:order-none">
             <section className="mb-12">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center">
@@ -307,7 +307,7 @@ export default function HomePageClient({
           </div>
 
           {/* Popular Posts Section - Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 order-1 lg:order-none">
             <section className="mb-12">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center">
