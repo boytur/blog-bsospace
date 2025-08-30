@@ -29,10 +29,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-700/50 rounded-lg overflow-hidden hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group">
+    <div className="bg-slate-900 border border-slate-700/50 rounded-lg overflow-hidden hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group h-96 flex flex-col">
       {/* Thumbnail */}
       {post.thumbnail && (
-        <div className="relative h-32 sm:h-40 md:h-48 overflow-hidden">
+        <div className="relative h-48 overflow-hidden flex-shrink-0">
           <Image
             src={post.thumbnail}
             alt={post.title}
@@ -46,7 +46,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
       )}
 
       {/* Content */}
-      <div className="p-3 sm:p-4 md:p-6">
+      <div className="p-3 sm:p-4 md:p-6 flex flex-col flex-1 min-h-0">
         {/* Date and Read Time */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-slate-400 mb-2 sm:mb-3">
           <div className="flex items-center gap-1">
@@ -88,7 +88,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
         )}
 
         {/* Stats and Read More */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 mt-auto">
           <div className="flex items-center gap-1 text-xs sm:text-sm text-slate-400">
             <Eye className="w-3 h-3 sm:w-4 sm:h-4 text-orange-400" />
             <span>{post.views?.toLocaleString() || "0"} views</span>
